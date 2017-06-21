@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="">
+    <title>WEB TITLE</title>
+
+    <!-- cloud css start -->
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/jquery-ui-1.12.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/slick-1.6.0.css" />
+    <!-- cloud css end-->
+
+    <!-- local css start -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1050px)" href="styles/main_desktop.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1049px)" href="styles/main_mobile.min.css" />
+    <!-- local css end -->
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="logo-container">
+            <img src="img/global/type-logo.png" alt="">
+        </div>
+        <ul class="nav-ul">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Travel Package</a></li>
+            <li class="mobile-hide"><a href="#"><img src="img/global/type-logo.png" alt=""></a></li>
+            <li><a href="#">Be Spoke</a></li>
+            <li><a href="#">Contact</a></li>
+            <ul class="sub-ul">
+                <li class="register-handle"><a href="#">Register</a></li>
+                <li class="login-handle"><a href="#" class="outline">Login</a></li>
+            </ul>
+        </ul>
+        <div class="mobile-handle">
+            <div class="mobile-lines" id="line1"></div>
+            <div class="mobile-lines" id="line2"></div>
+            <div class="mobile-lines" id="line3"></div>
+        </div>
+    </div>
+
+    <div id="parentContainer">
+        <div class="section-container" id="contactBanner">
+
+        </div>
+        <div class="section-container" id="contactForm">
+            <div class="title">
+                Any Question For Upcoming Trip ?
+            </div>
+            <div class="paragraph">
+                We are here to answer any uestions you may have about our trip experiences.
+                Reach out to us and we will respond as soon as we can.
+                <br> <br>
+                If there is something you have always wanter do experience and can't find it on our trip
+                package, let us know and we promise we will do our best to find it for you and
+                send you there!
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="full-input" placeholder="FULL NAME">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input" placeholder="EMAIL ADDRESS">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input" placeholder="SUBJECT">
+                </div>
+                <div class="form-group">
+                    <textarea name="" id=""  class="full-input tall" placeholder="MESSAGE"></textarea>
+                </div>
+                <input type="submit" class="dark full-input" value="SEND MESSAGE">
+            </form>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="flex">
+            <div class="flex-module">The Travel Company, Indonesia</div>
+            <div class="flex-module">+62 216615253</div>
+            <div class="flex-module">info@thetrvlco.com</div>
+            <div class="flex-module inline">
+                <img src="img/global/fb-logo.png" alt="">
+                thetrvlco.id
+            </div>
+            <div class="flex-module inline">
+                <img src="img/global/ig-logo.png" alt="">
+                thetrvl.co.id
+            </div>
+        </div>
+    </div>
+
+    <div class="jo-popup" id="registerPop">
+        <div class="popup-fader"></div>
+        <div class="abs-center form-container curved">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Password">
+                </div>
+                <input type="submit" class="overlay-button" value="REGISTER">
+            </form>
+            <div class="disclaimer">
+                By signing up, you agree to the <a href="#" class="blue-anchor">Terms of Service</a> and
+                <a href="#" class="blue-anchor">Privacy Policy</a>, including <a href="#" class="blue-anchor">Cookie Use</a>. Others will be able to
+                find you by email or phone number when provided.
+            </div>
+        </div>
+    </div>
+
+    <div class="jo-popup" id="loginPop">
+        <div class="popup-fader"></div>
+        <div class="abs-center form-container curved">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Phone, email or username">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input curved outline-input" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <div class="w50">
+                        <input type="checkbox" name="Yes" value="Yes" class="v-middle jo-checkbox" id="popupLoginRemember">
+                        <label for="popupLoginRemember" class="v-middle">Remember Me</label>
+                    </div>
+                    <div class="w50">
+                        <a href="#" class="blue-anchor">Forgot Password?</a>
+                    </div>
+                </div>
+                <input type="submit" class="overlay-button" value="LOG IN">
+            </form>
+            <div class="disclaimer">
+                Don't have an account? <a href="#" class="blue-anchor">Register Here!</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+    <!-- cloud js start -->
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/angular.1.6.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery.waypoints.4.0.1.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/slick-1.6.0.min.js"></script>
+    <!-- cloud js end   -->
+
+    <!-- local js start -->
+    <script type="text/javascript" src="script/jquery.js"></script>
+    <script type="text/javascript" src="script/angular.js"></script>
+    <!-- local js end   -->
+</html>
