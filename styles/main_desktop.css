@@ -230,6 +230,7 @@ img {
 
 #indexSlider .zoom {
   transform: scale(1.1);
+  background-attachment: fixed;
 }
 
 #indexSlider .title {
@@ -262,7 +263,7 @@ img {
 }
 
 #indexSlider .banner-2 {
-  background-image: url("../img/index/index-banner-3.png");
+  background-image: url("../img/index/index-banner-1.png");
 }
 
 #indexSlider .banner-1 {

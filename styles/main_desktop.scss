@@ -208,6 +208,7 @@ img{
         transform: scale(1.1);
         // opacity: 0.5;
         // filter: blur(5px);
+        background-attachment: fixed;
     }
     .title{
         position: relative;
@@ -238,7 +239,7 @@ img{
         }
     }
     .banner-2{
-        background-image: url('../img/index/index-banner-3.png');
+        background-image: url('../img/index/index-banner-1.png');
     }
     .banner-1{
         background-image: url('../img/index/index-banner-3.png');
