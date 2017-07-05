@@ -87,3 +87,14 @@ $('.choice-belt').slick({
 $('.nav-ul > li').on('click', function(){
     $(this).find('.sub-menu').toggleClass('active')
 })
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    
+    if (scroll > 150) {
+        $('#navbar').addClass('scrolled');
+    }
+    else {
+        $('#navbar').removeClass('scrolled');
+    }
+});

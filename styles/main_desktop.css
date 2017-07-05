@@ -50,8 +50,9 @@ img {
   width: 100%;
   z-index: 9;
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   text-transform: uppercase;
+  transition: all .3s ease;
 }
 
 #navbar .logo-container {
@@ -132,6 +133,10 @@ img {
 
 #navbar .sub-menu.active {
   display: block;
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .section-container#travelBanner, .section-container#contactBanner {

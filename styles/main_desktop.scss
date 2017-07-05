@@ -47,8 +47,9 @@ img{
     z-index: 9;
     padding: 10px 0;
     // color: white;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
+    transition: all .3s ease;
     .logo-container{
         display: none;
     }
@@ -119,6 +120,9 @@ img{
     .sub-menu.active{
         display: block;
     }
+}
+#navbar.scrolled{
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .section-container#travelBanner, .section-container#contactBanner{
     background-image: url('../img/global/top-banner.png');
