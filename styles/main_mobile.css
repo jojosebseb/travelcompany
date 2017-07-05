@@ -50,7 +50,7 @@ img {
   width: 100%;
   z-index: 9;
   padding: 20px 0;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.7);
   color: black;
   display: flex;
   justify-content: space-between;
@@ -65,7 +65,6 @@ img {
 }
 
 #navbar li:hover .sub-menu {
-  display: block;
   transition-delay: 1s;
 }
 
@@ -311,8 +310,9 @@ img {
 
 #indexSlider .caption {
   font-family: Saturday;
-  font-size: 60px;
+  font-size: 80px;
   width: 100vw;
+  top: -15px;
 }
 
 @keyframes dollyZoom {
@@ -372,7 +372,7 @@ img {
   font-family: Aller;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #destinationBanner .choice-module:hover img {
@@ -403,6 +403,7 @@ img {
   height: 100%;
   text-align: center;
   padding: 50px 0 0;
+  font-family: Aller;
 }
 
 #indexBanner2 .text-container .paragraph {
@@ -421,8 +422,9 @@ img {
 }
 
 #indexBanner2 .text-container .big-title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #indexBanner2 .text-container .abs-rotate {
@@ -430,6 +432,7 @@ img {
   top: 30px;
   left: 20px;
   transform: rotateZ(-30deg);
+  display: none;
 }
 
 #indexBanner3 {
@@ -649,6 +652,13 @@ label {
 #travelBanner, #contactBanner {
   min-height: 30vh;
   background: #333;
+}
+
+.section-container#travelBanner, .section-container#contactBanner {
+  background-image: url(../img/global/top-banner.png);
+  min-height: 53vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 #contactForm {

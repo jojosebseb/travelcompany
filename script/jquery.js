@@ -62,3 +62,28 @@ $('.tips-handle').on('click', function(){
     $('.tips-handle').removeClass('active');
     $(this).addClass('active');
 })
+
+
+$('.choice-belt').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  buttons: false,
+  dots: false,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
+});
+
+$('.nav-ul > li').on('click', function(){
+    $(this).find('.sub-menu').toggleClass('active')
+})
