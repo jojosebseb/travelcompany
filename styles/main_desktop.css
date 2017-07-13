@@ -354,7 +354,7 @@ img {
 }
 
 #destinationBanner .choice-module {
-  width: 25%;
+  width: 25vw;
   position: relative;
   overflow: hidden;
   top: 100px;

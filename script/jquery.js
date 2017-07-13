@@ -70,6 +70,7 @@ $('.choice-belt').slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
+  variableWidth: true,
   buttons: false,
   dots: false,
   arrows: false,
@@ -90,7 +91,7 @@ $('.nav-ul > li').on('click', function(){
 
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    
+
     if (scroll > 150) {
         $('#navbar').addClass('scrolled');
     }
