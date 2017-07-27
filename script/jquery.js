@@ -1,12 +1,11 @@
 var scrollTop, scrollValueSm;
 
 
-
 $(window).scroll(function(){
     scrollTop = $(document).scrollTop();
     scrollValueSm= (scrollTop / 2)-30;
     scrollValueSl= (scrollTop / 2)+380;
-    if ($(window).width() > 600) {
+    if ($(window).width() > 1040) {
         $('#indexBanner2').css({
             backgroundPosition: 'center '+ scrollValueSl + 'px'
         })
@@ -14,11 +13,8 @@ $(window).scroll(function(){
             backgroundPosition: 'center '+ scrollValueSm + 'px'
         })
     }
-
-
-
-
 });
+
 
 $('#indexSlider > .slide-parent').slick({
     fade: true,
@@ -27,6 +23,34 @@ $('#indexSlider > .slide-parent').slick({
     infinite: true,
     autolaySpeed: 2000
 })
+
+$('#travelHighlights').slick({
+    slidesToShow: 4,
+    arrows: false,
+    focusOnSelect: true,
+    variableWidth: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false
+        }
+      },
+    ]
+})
+
+console.log('newnewnew');
 
 $('#destinationBanner').waypoint(function(){
     console.log('asd');
@@ -64,6 +88,8 @@ $('.tips-handle').on('click', function(){
 })
 
 
+
+
 $('.choice-belt').slick({
   dots: true,
   infinite: false,
@@ -72,14 +98,23 @@ $('.choice-belt').slick({
   slidesToScroll: 1,
   variableWidth: true,
   buttons: false,
-  dots: false,
+  dots: true,
   arrows: false,
   responsive: [
     {
-      breakpoint: 600,
+      breakpoint: 1025,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false
       }
     },
   ]
@@ -99,3 +134,20 @@ $(window).scroll(function (event) {
         $('#navbar').removeClass('scrolled');
     }
 });
+var bg;
+$('.gallery-flex').on('mouseenter', '.flex-module', function(){
+    bg = $(this).find('.img-choice').attr('src');
+    $('.bg').css({
+        'background-image' : 'url('+bg+')'
+    });
+});
+
+$('.admin-gallery-flex').on('click', '.flex-module', function(){
+    $('.popup-parent').addClass('active');
+    bg = $(this).find('img').attr('src');
+    $('.popup-img').attr('src', bg)
+});
+
+$('.popup-parent').on('click', function(){
+    $(this).removeClass('active');
+})
