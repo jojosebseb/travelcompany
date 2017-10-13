@@ -167,11 +167,13 @@ $('.popup-parent').on('click', function(){
 
 
 
-$('.highlight-module > .w100').slick({
-    arrows: false,
+$('.highlight-module > .w100').slick({    
     variableWidth: false,
     dots: true,
     swipe: false,
+    arrows: true,
+    nextArrow: '<div class="arrow-box next"><div class="arrow"></div></div>',
+    prevArrow: '<div class="arrow-box prev"><div class="arrow"></div></div>'
 })
 
 $('#travelHighlights').slick({
@@ -193,14 +195,18 @@ $('#travelHighlights').slick({
      breakpoint: 600,
      settings: {
        slidesToShow: 2,
-       slidesToScroll: 1
+       slidesToScroll: 1,
+       arrows: true,
+    //    nextArrow: '<div class="arrow-box next"><div class="arrow"></div></div>',
+    //    prevArrow: '<div class="arrow-box prev"><div class="arrow"></div></div>'
      }
    },
    {
      breakpoint: 480,
      settings: {
        slidesToShow: 1,
-       slidesToScroll: 1
+       slidesToScroll: 1,
+
      }
    }
    // You can unslick at a given breakpoint now by adding:

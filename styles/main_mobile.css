@@ -984,6 +984,40 @@ label {
   opacity: 0.7;
 }
 
+.arrow-box {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.arrow-box .arrow {
+  height: 15px;
+  width: 15px;
+  border: 2px solid black;
+  transform: rotateZ(45deg);
+}
+
+.arrow-box.next {
+  right: 15px;
+}
+
+.arrow-box.next .arrow {
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.arrow-box.prev {
+  left: 15px;
+}
+
+.arrow-box.prev .arrow {
+  border-top: 0;
+  border-right: 0;
+}
+
 #travelHighlights {
   display: flex;
   flex-wrap: wrap;
@@ -1168,7 +1202,35 @@ label {
   opacity: 0.8;
   transition: all .3s ease;
   display: none;
-  transform: translateX(-50%) rotateZ(45deg) scale(1.1);
+  transform: translateX(-50%) rotateZ(45deg);
+  color: black;
+  color: transparent;
+}
+
+#travelHighlights .close-handle:after {
+  width: 20px;
+  height: 1px;
+  background: white;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#travelHighlights .close-handle:before {
+  width: 20px;
+  height: 1px;
+  background: white;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(90deg);
 }
 
 #travelHighlights .close-handle:hover {
