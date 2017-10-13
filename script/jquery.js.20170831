@@ -3,12 +3,12 @@ var scrollTop, scrollValueSm;
 
 $(window).scroll(function(){
     scrollTop = $(document).scrollTop();
-    scrollValueSm= (scrollTop / 2)-80;
+    scrollValueSm= (scrollTop / 2)-180;
     scrollValueSl= (scrollTop / 2)+380;
     if ($(window).width() > 1040) {
-        // $('#indexBanner2').css({
-        //     backgroundPosition: 'center '+ scrollValueSl + 'px'
-        // })
+        $('#indexBanner2').css({
+            backgroundPosition: 'center '+ scrollValueSl + 'px'
+        })
         $('#indexBanner3').css({
             backgroundPosition: 'center '+ scrollValueSm + 'px'
         })
@@ -73,16 +73,9 @@ $('.login-handle').on('click', function(){
     $('#loginPop').addClass('active');
 })
 
-$('body').on('click', '.popup-fader', function(){
+$('.popup-fader').on('click', function(){
     $(this).parent().removeClass('active');
-
 })
-
-$('body').on('click', '.close-button', function(){
-    console.log('asd');
-    $(this).parents('.jo-popup').removeClass('active');
-})
-
 
 $('#account-handle').on('click', function(){
     $('.account-ul').toggleClass('active');
@@ -165,58 +158,13 @@ $('.popup-parent').on('click', function(){
 })
 
 
-
+$(".highlight-desc").mCustomScrollbar({
+});
 
 $('.highlight-module > .w100').slick({
     arrows: false,
     variableWidth: false,
     dots: true,
-    swipe: false,
 })
 
-$('#travelHighlights').slick({
-    slidesToShow: 4,
-    dots: true,
-    // variableWidth: true,
-    infinite: false,
-    arrows: false,
-    responsive: [
-   {
-     breakpoint: 1424,
-     settings: {
-       slidesToShow: 3,
-       slidesToScroll: 1,
-       infinite: true,
-     }
-   },
-   {
-     breakpoint: 600,
-     settings: {
-       slidesToShow: 2,
-       slidesToScroll: 1
-     }
-   },
-   {
-     breakpoint: 480,
-     settings: {
-       slidesToShow: 1,
-       slidesToScroll: 1
-     }
-   }
-   // You can unslick at a given breakpoint now by adding:
-   // settings: "unslick"
-   // instead of a settings object
- ]
-})
-
-$('.read-handle').on('click', function(){
-    $('.highlight-desc').removeClass('active');
-    $('.highlight-summary').mCustomScrollbar('destroy');
-    $(this).parent().find('.highlight-summary').mCustomScrollbar({});
-    $(this).parent().toggleClass('active');
-})
-
-$('.close-handle').on('click', function(){
-    $('.highlight-summary').mCustomScrollbar('destroy');
-    $(this).parent().toggleClass('active');
-})
+console.log('asd');

@@ -1,0 +1,81 @@
+$('#indexSlide > .slide-parent').slick({
+    arrows: false,
+})
+
+$('#aboutSlide > .slide-parent').slick({
+    arrows: false,
+})
+
+$('.mobile-handle').on('click', function(){
+    $('.nav-ul').toggleClass('active');
+    $(this).toggleClass('active');
+})
+
+$('.product-slider').slick({
+    arrows: false,
+    infinite: false,
+    variableWidth: true,
+    focusOnSelect: true,
+    // centerMode: true
+})
+
+$('.product-gallery-container').slick({
+    slidesToShow: 4,
+    // centerMode: true,
+})
+
+var curUrl;
+$('.product-gallery-image').on('click', function(){
+    curUrl = $(this).find('img').attr('src');
+    // console.log(curUrl);
+    $('.product-big-image').find('img').attr('src', curUrl);
+})
+
+$('#indexSlide  .absolute-center').addClass('active');
+
+console.log('asd');
+
+$('.product-container .product-module').each(function(i){
+    console.log(i);
+    $(this).addClass('active');
+    $(this).css({
+        transition: 'all 0.5s ease '+i/5+'s'
+    });
+})
+$('#travelHighlights').slick({
+    slidesToShow: 4,
+    // variableWidth: true,
+    infinite: false,
+    arrows: false,
+    responsive: [
+   {
+     breakpoint: 1424,
+     settings: {
+       slidesToShow: 3,
+       slidesToScroll: 1,
+       infinite: true,
+     }
+   },
+   {
+     breakpoint: 600,
+     settings: {
+       slidesToShow: 2,
+       slidesToScroll: 1
+     }
+   },
+   {
+     breakpoint: 480,
+     settings: {
+       slidesToShow: 1,
+       slidesToScroll: 1
+     }
+   }
+   // You can unslick at a given breakpoint now by adding:
+   // settings: "unslick"
+   // instead of a settings object
+ ]
+})
+
+$('.read-handle').on('click', function(){
+    $(this).parent().toggleClass('active');
+})
