@@ -841,6 +841,7 @@ label {
 #travelSummary {
   text-align: center;
   font-family: Aller;
+  padding: 30px 0;
 }
 
 #travelSummary .package-duration {
@@ -917,40 +918,261 @@ label {
   background: #0e4079;
 }
 
+#travelPrice {
+  padding: 20px 0;
+  text-align: center;
+}
+
+#travelPrice .package-duration {
+  font-family: QuickSandReg !important;
+}
+
+#travelPrice .package-price {
+  font-size: 38px;
+  font-family: Trajan !important;
+  padding-bottom: 30px;
+}
+
+#travelPrice .package-price .subcaption {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+#travelPrice .package-flex .package-title {
+  font-family: QuickSandReg !important;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+#travelPrice .package-flex .package-choice {
+  padding: 5px 0;
+  font-family: Avenir !important;
+}
+
+#travelPrice .package-button {
+  background: black;
+  width: 150px;
+  margin-top: 20px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-family: QuickSandReg !important;
+  margin: 20px auto;
+}
+
+.section-container#travelBanner {
+  min-height: 100vh;
+  background: black;
+  background-image: url("../img/banner-1.png");
+  background-size: cover;
+  position: relative;
+}
+
+.section-container#travelBanner .text-container {
+  padding: 20vh 30px;
+  color: white;
+  text-align: center;
+}
+
+.section-container#travelBanner .text-container .title {
+  font-family: Saturday !important;
+  font-size: 90px;
+}
+
+.section-container#travelBanner .text-container .sub-title {
+  line-height: 27px;
+  opacity: 0.7;
+}
+
 #travelHighlights {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px 0;
+  padding-bottom: 60px;
+}
+
+#travelHighlights .slick-dots {
+  position: absolute;
+  bottom: 30px;
+  margin: 0;
+  padding-left: 30px;
+}
+
+#travelHighlights .slick-dots li {
+  border: 0px solid white;
+  margin: 0 10px;
+  transition: all .3s ease;
+  background: #aaa;
+}
+
+#travelHighlights .slick-dots li.slick-active {
+  background: black;
+}
+
+#travelHighlights * {
+  outline: none;
 }
 
 #travelHighlights .highlight-module {
-  width: 100vw;
+  width: 25%;
+  margin: 10px 0;
   font-family: Avenir;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  position: relative;
+  transition: all .3s ease;
+  padding-bottom: 230px;
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 #travelHighlights .highlight-module .slick-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   margin: 0;
+  padding-left: 30px;
+  justify-content: flex-start;
 }
 
 #travelHighlights .highlight-module .slick-dots li {
-  border: 2px solid black;
+  border: 0px solid white;
   margin: 0 5px;
+  transition: all .3s ease;
+  background: white;
 }
 
 #travelHighlights .highlight-module .slick-dots li.slick-active {
   background: black;
 }
 
-#travelHighlights .highlight-desc {
-  padding: 30px;
-  background: #fafafa;
-}
-
-#travelHighlights .w100 {
+#travelHighlights .highlight-module .w100 {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+#travelHighlights .highlight-module .w100 img {
+  width: 100%;
+}
+
+#travelHighlights .highlight-module:hover {
+  z-index: 5;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 3px rgba(50, 50, 50, 0.15);
+}
+
+#travelHighlights .highlight-module:hover .highlight-desc {
+  background: white;
+}
+
+#travelHighlights .highlight-module:hover .highlight-desc.active {
+  background: black;
+}
+
+#travelHighlights .highlight-desc {
+  padding: 30px 30px 30px 30px;
+  background: #fafafa;
+  transition: all .3s ease;
+  height: 230px;
+  position: absolute;
+  color: black;
+  bottom: 0;
+  left: 0;
+}
+
+#travelHighlights .highlight-desc .read-handle {
+  position: absolute;
+  bottom: 20px;
+  font-family: Avenir !important;
+  border-bottom: 1px solid transparent;
+}
+
+#travelHighlights .highlight-desc .read-handle:hover {
+  border-bottom: 1px solid black;
+}
+
+#travelHighlights .highlight-desc .day-container {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  top: -32px;
+  right: 20px;
+  padding: 10px 0;
+  font-size: 10px;
+  transition: all .3s ease;
+}
+
+#travelHighlights .highlight-desc .day-container .block {
+  font-family: Trajan !important;
+  font-size: 24px;
+}
+
+#travelHighlights .highlight-desc .highlight-summary {
+  padding: 10px 0;
+  line-height: 23px;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  transition: all .3s ease;
+}
+
+#travelHighlights .highlight-desc.active {
+  height: 100%;
+  background: black;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#travelHighlights .highlight-desc.active .highlight-summary {
+  height: 90%;
+  overflow: auto;
+  padding-right: 0px;
+  padding-bottom: 50px;
+}
+
+#travelHighlights .highlight-desc.active .bold {
+  font-size: 17px;
+}
+
+#travelHighlights .highlight-desc.active .day-container {
+  top: 200px;
+  opacity: 0;
+}
+
+#travelHighlights .highlight-desc.active .read-handle {
+  display: none;
+}
+
+#travelHighlights .highlight-desc.active .close-handle {
+  display: block;
+}
+
+#travelHighlights .close-handle {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-family: Trajan !important;
+  font-size: 40px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  opacity: 0.8;
+  transition: all .3s ease;
+  display: none;
+  transform: translateX(-50%) rotateZ(45deg) scale(1.1);
+}
+
+#travelHighlights .close-handle:hover {
+  opacity: 1;
 }
 
 #travelHighlights ul {
@@ -966,8 +1188,8 @@ label {
 }
 
 #travelHighlights .bold {
-  font-weight: bold;
-  font-family: Aller;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 #tipsContainer {
