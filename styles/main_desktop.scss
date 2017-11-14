@@ -216,7 +216,7 @@ li#account-handle:after{
 }
 .coming-soon{
     text-align: center;
-    font-family: Trajan !important;
+    font-family: QuicksandReg !important;
     padding: 22vh 0;
     font-size: 40px;
 }
@@ -267,7 +267,7 @@ li#account-handle {
     background-size: cover;
     position: relative;
     .text-container{
-        top: 50%;
+        top: 35%;
         left: 50%;
         color: white;
         text-align: center;
@@ -495,8 +495,8 @@ li#account-handle {
             display: inline-block;
             padding: 10px 30px;
             // border-radius: 20px;
-            background: rgba(222, 222, 222, 0.67);
-            color: black;
+            // background: rgba(222, 222, 222, 0.67);
+            color: white;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -506,6 +506,8 @@ li#account-handle {
             text-transform: uppercase;
             font-weight: bold;
             font-size: 16px;
+            font-family: 'Times' !important;
+            letter-spacing: 4px;
         }
     }
     .choice-module:hover{
@@ -538,7 +540,7 @@ li#account-handle {
         width: 50vw;
         margin: auto;
         line-height: 22px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .white-overlay{
         position: absolute;
@@ -612,6 +614,18 @@ li#account-handle {
         padding: 10px 0;
         color: white;
         font-size: 14px;
+    }
+}
+.register-inline-button{
+    a{
+        background: #111;
+        color: white;
+        display: block;
+        padding: 10px 0;
+        color: white;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
     }
 }
 #fblogin{
@@ -847,9 +861,41 @@ label{
         }
     }
 }
-
-#contactForm{
+#bookingForm{
+    .w50{
+        width: 50%;
+    }
+    .w100{
+        width: 100%;
+    }
+    .form-group{
+        padding: 0 10px;
+    }
+    form.flex{
+        width: 520px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .paragraph{
+        padding: 50px 0;
+    }
+    .dark.full-input{
+        margin: 0 10px;
+    }
+    .full-input.option{
+        padding-right: 10px;
+    }
+}
+#contactForm, #bookingForm{
     min-height: 60vh;
+    padding-bottom: 10vh;
+    .contact-us-banner-title {
+        font-size: 25px;
+        font-family: QuicksandReg !important;
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+    }
     .title{
         text-align: center;
         font-family: Trajan !important;
@@ -1124,6 +1170,9 @@ label{
             overflow: hidden;
             height: 100px;
             transition: all .3s ease;
+            p{
+                padding-bottom: 15px;
+            }
         }
     }
     .highlight-desc.active{
@@ -1185,6 +1234,7 @@ label{
     .bold{
         margin-bottom: 10px;
         font-size: 15px;
+        height: 34px;
         // font-weight: bold;
         // font-family: Aller;
     }
@@ -1923,5 +1973,17 @@ section#section-post-not-found {
             top: 0px;
             opacity: 1;
         }
+    }
+}
+
+ul.lang-ul {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    li{
+        margin: 0 10px;
+    }
+    li.active-lang:after{
+        width: 100% !important;
     }
 }

@@ -233,7 +233,7 @@ li#account-handle:after {
 
 .coming-soon {
   text-align: center;
-  font-family: Trajan !important;
+  font-family: QuicksandReg !important;
   padding: 22vh 0;
   font-size: 40px;
 }
@@ -291,7 +291,7 @@ li#account-handle {
 }
 
 .section-container#travelBanner .text-container {
-  top: 50%;
+  top: 35%;
   left: 50%;
   color: white;
   text-align: center;
@@ -547,8 +547,7 @@ li#account-handle {
 #destinationBanner .choice-module .button-caption {
   display: inline-block;
   padding: 10px 30px;
-  background: rgba(222, 222, 222, 0.67);
-  color: black;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -558,6 +557,8 @@ li#account-handle {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
+  font-family: 'Times' !important;
+  letter-spacing: 4px;
 }
 
 #destinationBanner .choice-module:hover img {
@@ -606,7 +607,7 @@ li#account-handle {
   width: 50vw;
   margin: auto;
   line-height: 22px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #indexBanner2 .white-overlay {
@@ -690,6 +691,17 @@ li#account-handle {
   padding: 10px 0;
   color: white;
   font-size: 14px;
+}
+
+.register-inline-button a {
+  background: #111;
+  color: white;
+  display: block;
+  padding: 10px 0;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
 }
 
 #fblogin a {
@@ -940,11 +952,50 @@ label {
   font-size: 120px;
 }
 
-#contactForm {
-  min-height: 60vh;
+#bookingForm .w50 {
+  width: 50%;
 }
 
-#contactForm .title {
+#bookingForm .w100 {
+  width: 100%;
+}
+
+#bookingForm .form-group {
+  padding: 0 10px;
+}
+
+#bookingForm form.flex {
+  width: 520px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bookingForm .paragraph {
+  padding: 50px 0;
+}
+
+#bookingForm .dark.full-input {
+  margin: 0 10px;
+}
+
+#bookingForm .full-input.option {
+  padding-right: 10px;
+}
+
+#contactForm, #bookingForm {
+  min-height: 60vh;
+  padding-bottom: 10vh;
+}
+
+#contactForm .contact-us-banner-title, #bookingForm .contact-us-banner-title {
+  font-size: 25px;
+  font-family: QuicksandReg !important;
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#contactForm .title, #bookingForm .title {
   text-align: center;
   font-family: Trajan !important;
   text-transform: uppercase;
@@ -952,34 +1003,34 @@ label {
   font-size: 27px;
 }
 
-#contactForm .paragraph {
+#contactForm .paragraph, #bookingForm .paragraph {
   text-align: center;
   width: 500px;
   line-height: 16px;
 }
 
-#contactForm form {
+#contactForm form, #bookingForm form {
   width: 500px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-#contactForm .form-group {
+#contactForm .form-group, #bookingForm .form-group {
   margin: 10px 0;
 }
 
-#contactForm .full-input {
+#contactForm .full-input, #bookingForm .full-input {
   padding: 15px;
   background: #eee;
 }
 
-#contactForm .full-input.tall {
+#contactForm .full-input.tall, #bookingForm .full-input.tall {
   height: 150px;
   resize: vertical;
 }
 
-#contactForm .dark {
+#contactForm .dark, #bookingForm .dark {
   background: #333;
   color: white;
   cursor: pointer;
@@ -1250,6 +1301,10 @@ label {
   transition: all .3s ease;
 }
 
+#travelHighlights .highlight-desc .highlight-summary p {
+  padding-bottom: 15px;
+}
+
 #travelHighlights .highlight-desc.active {
   height: 100%;
   background: black;
@@ -1318,6 +1373,7 @@ label {
 #travelHighlights .bold {
   margin-bottom: 10px;
   font-size: 15px;
+  height: 34px;
 }
 
 #tipsContainer {
@@ -2147,4 +2203,18 @@ section#section-post-not-found .div-post-not-found {
 .destination-list-container .travel-image-box:hover .short-caption {
   top: 0px;
   opacity: 1;
+}
+
+ul.lang-ul {
+  display: flex;
+  position: absolute;
+  left: 15px;
+}
+
+ul.lang-ul li {
+  margin: 0 10px;
+}
+
+ul.lang-ul li.active-lang:after {
+  width: 100% !important;
 }

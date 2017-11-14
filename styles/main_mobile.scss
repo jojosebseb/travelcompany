@@ -114,6 +114,7 @@ img{
             position: relative;
             background: rgba(250, 250, 250, 1);
             transition: all .3s ease;
+            text-transform: capitalize;
             a{
                 display: block;
             }
@@ -309,6 +310,8 @@ img{
         display: flex;
         padding-left: 5%;
         display: flex;
+        flex-wrap: wrap;
+        text-align: left;
         align-items: baseline;
     }
     .zoom{
@@ -404,9 +407,9 @@ img{
         .button-caption{
             display: inline-block;
             padding: 10px 30px;
-            border-radius: 20px;
-            background: white;
-            color: black;
+            // border-radius: 20px;
+            // background: rgba(222, 222, 222, 0.67);
+            color: white;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -416,6 +419,10 @@ img{
             text-transform: uppercase;
             font-weight: bold;
             font-size: 14px;
+            font-family: 'Times' !important;
+            letter-spacing: 4px;
+            width: 80%;
+            text-align: center;
         }
     }
     .choice-module:hover{
@@ -424,6 +431,10 @@ img{
         }
         .button-caption{
         }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -516,6 +527,19 @@ img{
         padding: 10px 0;
         color: white;
         font-size: 14px;
+    }
+}
+
+.register-inline-button{
+    a{
+        background: #111;
+        color: white;
+        display: block;
+        padding: 10px 0;
+        color: white;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
     }
 }
 #fblogin{
@@ -751,8 +775,40 @@ label{
     width: 100%;
     text-align: center;
 }
-
-#contactForm{
+#bookingForm{
+    .w50{
+        width: 100%;
+    }
+    .w100{
+        width: 100%;
+    }
+    .form-group{
+        padding: 0 10px;
+    }
+    form.flex{
+        // width: 520px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .paragraph{
+        padding: 20px 0;
+    }
+    .dark.full-input{
+        margin: 0 10px;
+    }
+    .full-input.option{
+        padding-right: 10px;
+    }
+    .contact-us-banner-title {
+        font-size: 25px;
+        font-family: QuicksandReg !important;
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+    }
+}
+#contactForm, #bookingForm{
     min-height: 60vh;
     padding: 0 10px;
     .title{
@@ -853,7 +909,7 @@ label{
         width: 10px;
         cursor: pointer;
         background: white;
-        border: 2px solid #0e4079;
+        // border: 2px solid #0e4079;
         margin: 0 10px;
         border-radius: 50%;
         button{
@@ -861,7 +917,7 @@ label{
         }
     }
     li.slick-active{
-        background: #0e4079
+        background: black;
     }
 }
 #travelPrice{
@@ -2021,4 +2077,17 @@ div#travel-banner-div {
     left: 50%;
     transform: translate(-50%);
     display: block;
+}
+
+ul.lang-ul {
+    display: flex;
+    // position: absolute;
+    background: #fafafa;
+    // left: 15px;
+    li{
+        // margin: 0 10px;
+    }
+    li.active-lang:after{
+        width: 100% !important;
+    }
 }
